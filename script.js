@@ -47,3 +47,51 @@ function reiniciarJuego() {
   }
   turno = 'X';
 }
+const juego = document.getElementById('juego');
+const dinosaurio = document.getElementById('dinosaurio');
+const cactus = document.getElementById('cactus');
+
+let saltando = false;
+
+function saltar() {
+  if (!saltando) {
+    saltando = true;
+    dinosaurio.style.animation = 'saltar 0.6s linear';
+    setTimeout(() => {
+      dinosaurio.style.animation = '';
+      saltando = false;
+    }, 600);
+  }
+}
+
+juego.addEventListener('click', saltar);
+
+function colision() {
+  const rectDino = dinosaurio.getBoundingClientRect();
+  const rectCactus = cactus.getBoundingClientRect();
+  if (
+    rectDino.right > rectCactus.left &&
+    rectDino.left < rectCactus.right &&
+    rectDino.bottom > rectCactus.top &&
+    rectDino.top < rectCactus.bottom
+  ) {
+    alert('¡Has perdido!');
+    location.reload();
+  }
+}
+
+setInterval(() => {
+  colision();
+  moverCactus();
+}, 50);
+
+function moverCactus() {
+  const posCactus = parseInt(
+    window.getComputedStyle(cactus).getPropertyValue('right')
+  );
+  if (posCactus < 800) {
+    cactus.style.right = posCactus + 5 + 'px';
+  } else {
+    cactus.style.right = 0;
+  }
+}
