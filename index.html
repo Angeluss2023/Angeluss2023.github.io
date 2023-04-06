@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/page2.html">Otros</a>
+    </nav>
+    <main>
+      <h1>Esta es una practica</h1>
+    </main>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#acerca">Acerca de</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="inicio">
+      <h1>Mi página web de ejemplo</h1>
+      <img
+        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+        alt="Logo de Google"
+      />
+      <p>
+        ¡Bienvenido a mi página web de ejemplo! Aquí encontrarás información
+        interesante.
+      </p>
+    </section>
+
+    <section id="acerca">
+      <h2>Acerca de</h2>
+      <p>
+        Esta página web es un ejemplo creado para demostrar el uso de etiquetas
+        HTML básicas.
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="contact.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <br />
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <footer>
+      <p>
+        &copy; 2023 - Mi página web de ejemplo. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
