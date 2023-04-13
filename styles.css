@@ -93,3 +93,36 @@ p {
   font-size: 1.5em;
   text-align: center;
 }
+/* Estilos básicos para la lista desordenada y el elemento de lista */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Estilos de animación para el elemento de lista con la clase 'elementoDesplazado' */
+.elementoDesplazado {
+  position: relative;
+  animation: desplazamiento 3s linear infinite;
+}
+
+/* Keyframes para la animación de desplazamiento */
+@keyframes desplazamiento {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 200px;
+  }
+  100% {
+    left: 0;
+  }
+}
